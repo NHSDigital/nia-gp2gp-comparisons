@@ -23,6 +23,7 @@ const observationFieldsToIgnore = [];
 const practitionerFieldsToIgnore = ["resource.meta.versionId", "resource.gender"];
 const procedureRequestFieldsToIgnore = [];
 const diagnosticReportFieldsToIgnore = [];
+const specimenFieldsToIgnore = [];
 
 // # Config section 3
 // object removers remove the whole of a parent object if a condition occurs 
@@ -82,6 +83,10 @@ const procedureRequestObjectRemover = [
 ]
 
 const diagnosticReportObjectRemover = [
+	{ "parentName": "resource.identifier", "field": "system", "checkType": "contains", "checkValues": ["https://EMISWeb", "https://PSSAdaptor"] },
+]
+
+const specimenObjectRemover = [
 	{ "parentName": "resource.identifier", "field": "system", "checkType": "contains", "checkValues": ["https://EMISWeb", "https://PSSAdaptor"] },
 ]
 
@@ -229,6 +234,7 @@ function preProcessFile(jsonObject) {
 			case "Practitioner": newEntryArray.push(recursiveIdScan(entry, practitionerFieldsToIgnore, null, "", entry.resource.id)); break;
 			case "ProcedureRequest": newEntryArray.push(recursiveIdScan(entry, procedureRequestFieldsToIgnore, procedureRequestObjectRemover, "", entry.resource.id)); break;
 			case "DiagnosticReport": newEntryArray.push(recursiveIdScan(entry, diagnosticReportFieldsToIgnore, diagnosticReportObjectRemover, "", entry.resource.id)); break;
+			case "SpecimenReport": newEntryArray.push(recursiveIdScan(entry, specimenFieldsToIgnore, specimenObjectRemover, "", entry.resource.id)); break;
 			default: processUnsupportedResourceType(entry.resource.resourceType);
 		}
 	}
