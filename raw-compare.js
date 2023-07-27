@@ -957,6 +957,10 @@ function scanForIdsAndReplace(emisOutputFileJson, psOutputFileJson) {
 				idsToReplace = idsToReplace.concat(findIdsToReplace(resourceType, resourceTypeIndex, diagnosticReportMatchFields, entriesByResource.emisEntries, entriesByResource.psEntries));
 				break;
 			}
+			case "Specimen": {
+				idsToReplace = idsToReplace.concat(findIdsToReplace(resourceType, resourceTypeIndex, specimenMatchFields, entriesByResource.emisEntries, entriesByResource.psEntries));
+				break;
+			}
 		}
 	}
 
