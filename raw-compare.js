@@ -234,7 +234,7 @@ function preProcessFile(jsonObject) {
 			case "Practitioner": newEntryArray.push(recursiveIdScan(entry, practitionerFieldsToIgnore, null, "", entry.resource.id)); break;
 			case "ProcedureRequest": newEntryArray.push(recursiveIdScan(entry, procedureRequestFieldsToIgnore, procedureRequestObjectRemover, "", entry.resource.id)); break;
 			case "DiagnosticReport": newEntryArray.push(recursiveIdScan(entry, diagnosticReportFieldsToIgnore, diagnosticReportObjectRemover, "", entry.resource.id)); break;
-			case "SpecimenReport": newEntryArray.push(recursiveIdScan(entry, specimenFieldsToIgnore, specimenObjectRemover, "", entry.resource.id)); break;
+			case "Specimen": newEntryArray.push(recursiveIdScan(entry, specimenFieldsToIgnore, specimenObjectRemover, "", entry.resource.id)); break;
 			default: processUnsupportedResourceType(entry.resource.resourceType);
 		}
 	}
