@@ -557,7 +557,7 @@ function setupCompare(emisEntries, psEntries, resourceName, resourceTypeIndex, a
 
 			// if we did not find a match...
 			outputReport = outputReport + "EMIS " + resourceName + " Entry " + (emisEntryCount + 1) + "\n";
-			outputReport = outputReport + "MISSING Entry: EMIS entry with ID " + emisEntryId + " has not been found in the PS enties \n"
+			outputReport = outputReport + "MISSING Entry: EMIS entry with ID " + emisEntryId + " has not been found in the PS entries \n"
 
 			// output any potential matches at the previous stage in the search process
 			for (var k = 0; k < potentialMatchingEntries.length; k++) {
