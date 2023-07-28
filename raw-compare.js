@@ -108,7 +108,7 @@ const medicationMatchFields = ["code.coding.[0].display"];
 const medicationRequestMatchFields = ["dispenseRequest.validityPeriod.start", "intent", "dosageInstruction.[0].text"];
 const medicationStatementMatchFields = ["effectivePeriod.start", "dosage.[0].text"];
 const observationMatchFields = ["code.coding.[0].code", "effectiveDateTime", "comment"];
-const diagnosticReportMatchFields = ["id"];
+const diagnosticReportMatchFields = ["specimen.[0].reference"];
 
 // # Config section 5 
 // array sorters manage matching on nested arrays, for example paticiant array fields will be 
