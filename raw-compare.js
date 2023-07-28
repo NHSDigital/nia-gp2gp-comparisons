@@ -23,7 +23,7 @@ const observationFieldsToIgnore = [];
 const practitionerFieldsToIgnore = ["resource.meta.versionId", "resource.gender"];
 const procedureRequestFieldsToIgnore = [];
 const diagnosticReportFieldsToIgnore = [];
-const specimenFieldsToIgnore = ["resource.status", "resource.receivedTime", "resource.identifier", "resource.collection"];
+const specimenFieldsToIgnore = ["resource.status", "resource.receivedTime", "resource.identifier"];
 
 // # Config section 3
 // object removers remove the whole of a parent object if a condition occurs 
@@ -103,7 +103,7 @@ const listMatchFields = ["code.coding.[0].code", "date", "title", "id"];
 const locationMatchFields = ["name"];
 const conditionMatchFields = ["onsetDateTime", "assertedDate", "code.coding.[0].code"];
 const procedureRequestMatchFields = ["id"];
-const specimenMatchFields = ["accessionIdentifier.value", "type.text"];
+const specimenMatchFields = ["accessionIdentifier.value", "type.text", "collection.collectedDateTime"];
 const medicationMatchFields = ["code.coding.[0].display"];
 const medicationRequestMatchFields = ["dispenseRequest.validityPeriod.start", "intent", "dosageInstruction.[0].text"];
 const medicationStatementMatchFields = ["effectivePeriod.start", "dosage.[0].text"];
