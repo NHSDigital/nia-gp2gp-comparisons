@@ -18,8 +18,6 @@ See `./raw-compare-results` for output examples.
 
 ## Running the comparator Unit Tests
 
-You will need Node.JS installed.
-
 Run `npm install`
 
 Then run `npm test`
