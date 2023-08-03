@@ -2,6 +2,8 @@
 
 Compares two [FHIR JSON bundles][bundle] to identify discrepancies.
 
+__CAUTION: This repository contains file paths which are not valid on Windows. Cloning from a Windows device may result in errors. See GitHub issue #7__
+
 ## Requirements
 
 - [Node.JS] version >= 15
