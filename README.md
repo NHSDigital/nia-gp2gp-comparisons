@@ -2,7 +2,11 @@
 
 Compares two [FHIR JSON bundles][bundle] to identify discrepancies.
 
-__CAUTION: This repository contains file paths which are not valid on Windows. Cloning from a Windows device may result in errors. See GitHub issue #7__
+> [!NOTE]  
+> This repository has been archived now that the GP2GP FHIR Adaptor assurance for First of Type has completed
+
+> [!WARNING]  
+> This repository contains file paths which are not valid on Windows. Cloning from a Windows device may result in errors. See GitHub issue #7
 
 ## Requirements
 
